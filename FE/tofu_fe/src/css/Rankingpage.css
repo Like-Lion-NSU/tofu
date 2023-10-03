@@ -1,0 +1,54 @@
+.rankingbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+    margin-top: 5vh;
+}
+.rankingtitlebox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;    
+    height: 17vh;
+    margin-bottom: 3vh;
+}
+.rankingtitle{
+    font-weight: 500;
+}
+.totalcount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #3e9c40;
+    background-color: #f9f3c3;
+    border-radius: 50px;
+    width: 150px;
+    padding:1.5vh 0;
+}
+.ranklistbox{
+    width: 600px;
+    border: 3px solid #C1CCB7;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #C1CCB7;
+}
+.mbtilist{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #C1CCB7;
+    width: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.rankinglist{
+    width: 400px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import '../css/Testpage.css'
 import { useNavigate } from "react-router";
-import axios from 'axios'
 
 export default function Testpage(){
     const [Index, setIndex] = useState(0)
@@ -13,27 +12,21 @@ export default function Testpage(){
     const QuestionA = ['E', 'N', 'F', 'P', 'I', 'S', 'T', 'J', 'E', 'N', 'F', 'P']
     const QuestionB = ['I', 'S', 'T', 'J', 'E', 'N', 'F', 'P', 'I', 'S', 'T', 'J']
 
-    const PostSelctList = async() => {
-        try{
-            const response = await axios.post('/api/mbti', selected)
-            const mbti = response.data.mbti
-            navigate('/resultpage', {state:{mbti:mbti}})
-        } catch(err){
-            console.log(err)
-        }
-    }
 
-    const UserSelect = e =>{
-        console.log(e.target.title)
-        setSelected([...selected, e.target.title])
-        if(Index === 11){
+    const UserSelect = e => {
+        console.log(e.target.title);
+        setSelected([...selected, e.target.title]);
+        if (Index < 11) {
+            setIndex(Index => Index + 1);
+        } else {
+            // Index가 11일 때는 PostSelctList를 호출
             selected.push(e.target.title)
-            PostSelctList()
-        }else{
-            setIndex(Index => Index+1)
+            window.localStorage.setItem('list', JSON.stringify(selected))
+            window.location.href = '/resultpage'
         }
-    }
-    
+    };
+
+
     const progressBarWidth = ((Index + 1) / QuestionA.length) * 100 + "%";
     const progressBarStyle = { width: progressBarWidth };
 

@@ -3,7 +3,6 @@ import '../css/Mainpage.css'
 import tofuImage from '../img/tofu-image.png'
 import { useNavigate } from "react-router-dom";
 import maintext from '../img/maintext.png'
-import arrowbtn from '../img/화살표버튼.png'
 
 export default function Mainpage() {
     const navigate = useNavigate()

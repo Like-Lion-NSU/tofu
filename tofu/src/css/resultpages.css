@@ -30,8 +30,8 @@
   background-position: 20px;
 }
 .result-box__analyze--analysisTable{
-  width:70%;
-  height: 30%;
+  width: 20vw;
+  height: 35vh;
   background-color: #4A4A48;
 }
 .btn-box{
@@ -54,4 +54,8 @@
 }
 .btn-replay{
   background-color: #F9F3C3;
+}
+
+.btn-rank{
+  background-color: #7df89c;
 }

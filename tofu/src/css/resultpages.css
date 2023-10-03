@@ -34,6 +34,55 @@
   height: 35vh;
   background-color: #4A4A48;
 }
+.result-bestWorst{
+  display: flex;
+  justify-content: center;
+}
+.result-best{
+  margin: 0;
+  border: solid 2px black;
+  border-left: none;
+  width: 20vw;
+  height: 30vh;
+  background-image: url("../img/흰두부.png");
+  background-repeat: no-repeat;
+  background-position: 20px;
+}
+.result-worst{
+  border: solid 2px black;
+  border-left: none;
+  border-right: none;
+  width: 20vw;
+  height: 30vh;
+  background-image: url("../img/흰두부.png");
+  background-repeat: no-repeat;
+  background-position: 10px;
+}
+.result-bestWorstText{
+  display: flex;
+  justify-content: center;
+}
+.result-bestWorstText__best{
+  margin: 0;
+  border: solid 2px black;
+  border-left: none;
+  border-top: none;
+  width: 20vw;
+}
+.result-bestWorstText__best h2{
+  margin-top: 0;
+}
+.result-bestWorstText__worst{
+  margin: 0;
+  border: solid 2px black;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  width: 20vw;
+}
+.result-bestWorstText__worst h2{
+  margin-top: 0;
+}
 .btn-box{
   display: flex;
   flex-direction: column;

@@ -545,6 +545,7 @@ export default function Resultpage() {
               backgroundImage: `url(${imgpath})`,
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
+              backgroundSize: "contain",
             }}
           ></div>
           <div

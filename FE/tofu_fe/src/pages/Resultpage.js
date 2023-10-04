@@ -34,11 +34,9 @@ export default function Resultpage() {
   const mbtidetails = {
     ENFJ: (
       <>
-        <p>
-          정의로운 사회운동가, 언변능숙형
-        </p>
+        <p>정의로운 사회운동가, 언변능숙형</p>
         <p>당신은 얇아보이지만 누구보다 올곧은 푸주입니다!</p>
-        
+
         <p>온화하고 적극적이며, 책임감이 강하고 사교성이 풍부합니다.</p>
         <p>동경심이 많습니다. 이타적이고 참을성이 많습니다.</p>
         <p>
@@ -53,9 +51,7 @@ export default function Resultpage() {
     ),
     ENFP: (
       <>
-        <p>
-          재기발랄한 활동가, 스파크형
-        </p>
+        <p>재기발랄한 활동가, 스파크형</p>
         <p>당신은 따뜻하게 남을 감싸줄 수 있는 유부입니다!</p>
         <p>따뜻하고 정역적이며 활기가 넘칩니다.</p>
         <p>재능이 많으며 상상력이 풍부합니다.</p>
@@ -74,9 +70,7 @@ export default function Resultpage() {
     ),
     ENTJ: (
       <>
-        <p>
-          대담한 통솔자, 지도자형
-        </p>
+        <p>대담한 통솔자, 지도자형</p>
         <p>당신은 자신만의 색이 확고한 취두부입니다!</p>
         <p>
           열성이 많으며, 자기주장이 강하면서 단호하고, 지도력과 통솔력이
@@ -96,9 +90,7 @@ export default function Resultpage() {
     ),
     ENTP: (
       <>
-        <p>
-          뜨거운 논쟁을 즐기는 변론가, 발명가형
-        </p>
+        <p>뜨거운 논쟁을 즐기는 변론가, 발명가형</p>
         <p>당신은 겉보기엔 만만하지만, 속은 누구보다 단단한 두부과입니다!</p>
         <p>
           본인이 구상하는 바를 실현시키고 싶어하는 기질이 강하며, 아웃사이더적인
@@ -113,9 +105,7 @@ export default function Resultpage() {
     ),
     ESFJ: (
       <>
-        <p>
-          사교적인 외교관, 친선도모형
-        </p>
+        <p>사교적인 외교관, 친선도모형</p>
         <p>당신은 사람들에게 공감을 잘하고 융화가 잘 되는 두유입니다!</p>
         <p>동정심이 많고 다른 사람에게 관심을 쏟으며 인화를 중시합니다.</p>
         <p>타고난 협력자로서 동료애가 많고 친절하며 능동적인 구성원입니다.</p>
@@ -127,9 +117,7 @@ export default function Resultpage() {
     ),
     ESFP: (
       <>
-        <p>
-          자유로운 영혼의 연예인, 사교적인 유형
-        </p>
+        <p>자유로운 영혼의 연예인, 사교적인 유형</p>
         <p>당신은 매콤하고 화려한 마파두부입니다!</p>
         <p>사교적이고 활동적입니다.</p>
         <p>수용력이 강하고 친절하며 낙천적입니다.</p>
@@ -144,9 +132,7 @@ export default function Resultpage() {
     ),
     ESTJ: (
       <>
-        <p>
-          엄격한 관리자, 사업가형
-        </p>
+        <p>엄격한 관리자, 사업가형</p>
         <p>당신은 여러 사람을 아우르는, 여러 재료를 조합한 순두부찌개입니다!</p>
         <p>현실적이며 활동을 조직화하고, 주도해 나가는 지도력이 있습니다.</p>
         <p>
@@ -162,9 +148,7 @@ export default function Resultpage() {
     ),
     ESTP: (
       <>
-        <p>
-          모험을 즐기는 사업가, 수완 좋은 활동가형
-        </p>
+        <p>모험을 즐기는 사업가, 수완 좋은 활동가형</p>
         <p>
           당신은 강한 현실감각으로 문제를 해결하는, 뜨거운 기름에서도 살아남는
           두부강정입니다!
@@ -180,9 +164,7 @@ export default function Resultpage() {
     ),
     INFJ: (
       <>
-        <p>
-          통찰력 있는 선지자, 예언가형
-        </p>
+        <p>통찰력 있는 선지자, 예언가형</p>
         <p>
           당신은 다양한 사람과 잘 어울리는, 어떤 양념이든 잘 어울리는
           두부조림입니다!
@@ -201,9 +183,7 @@ export default function Resultpage() {
     ),
     INFP: (
       <>
-        <p>
-          열정적인 중재자, 잔다르크형
-        </p>
+        <p>열정적인 중재자, 잔다르크형</p>
         <p>당신은 다른사람들과 잘 어울리며 순둥한 순두부입니다!</p>
         <p>세계 두부의 4%가 이 유형에 속하며 차분하고 창의적입니다.</p>
         <p>
@@ -219,9 +199,7 @@ export default function Resultpage() {
     ),
     INTJ: (
       <>
-        <p>
-          용의주도한 전략가형
-        </p>
+        <p>용의주도한 전략가형</p>
         <p>
           두부로도 고기맛을 낼 수 있다!
           <br />
@@ -236,10 +214,8 @@ export default function Resultpage() {
     ),
     INTP: (
       <>
-        <p>
-          논리적인 사색가, 아이디어 뱅크형
-        </p>
-        <p>당신은 조용하고 과묵한 건두부입니다!</p>      
+        <p>논리적인 사색가, 아이디어 뱅크형</p>
+        <p>당신은 조용하고 과묵한 건두부입니다!</p>
         <p>조용하고 과묵하며 논리와 분석으로 문제를 해결하기를 좋아합니다.</p>
         <p>
           먼저 대화를 시작하지 않는 편이지만 관심있는 분야에 대하여 말을 많이
@@ -252,13 +228,11 @@ export default function Resultpage() {
     ),
     ISFJ: (
       <>
-        <p>
-          용감한 수호자, 실용적인 조력가
-        </p>
+        <p>용감한 수호자, 실용적인 조력가</p>
         <p>
           당신은 두부와 김치의 조합처럼 적은 사람과 영혼의 파트너인
           두부김치입니다!
-        </p> 
+        </p>
         <p>조용하고 차분하며 따뜻하고 친근합니다.</p>
         <p>
           책임감과 인내력 또한 매우 강하고 본인의 친한 친구나 가족에게 애정이
@@ -276,9 +250,7 @@ export default function Resultpage() {
     ),
     ISFP: (
       <>
-        <p>
-          호기심 많은 예술가, 성인군자형
-        </p>
+        <p>호기심 많은 예술가, 성인군자형</p>
         <p>당신은 다정하고 온화한 흰두부입니다!</p>
         <p>말없이 다정하고 온화하며 사람들에게 친절합니다.</p>
         <p>상대방을 잘 알게 될 때까지 내면의 모습을 잘 보이지 않습니다.</p>
@@ -292,9 +264,7 @@ export default function Resultpage() {
     ),
     ISTJ: (
       <>
-        <p>
-          청렴결백 논리주의자, 세상의 소금형
-        </p>
+        <p>청렴결백 논리주의자, 세상의 소금형</p>
         <p>당신은 냉철하며 신념이 강한 검은콩두부입니다!</p>
         <p>실제 사실에 대하여 정확하고 체계적으로 기억합니다.</p>
         <p>일 처리에 있어서도 신중하고 책임감이 있습니다.</p>
@@ -305,9 +275,7 @@ export default function Resultpage() {
     ),
     ISTP: (
       <>
-        <p>
-          논리적인 실용주의자, 백과사전형
-        </p>
+        <p>논리적인 실용주의자, 백과사전형</p>
         <p>당신은 솔직 담백한 두부전입니다!</p>
         <p>과묵하며 절제된 호기심으로 인생을 관찰하고 눈치가 빠릅니다.</p>
         <p>
@@ -497,6 +465,7 @@ export default function Resultpage() {
               backgroundImage: `url(${bestImg})`,
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
+              backgroundSize: "contain",
             }}
           ></div>
           <div className='result-bestWorstText__best'>
@@ -511,6 +480,7 @@ export default function Resultpage() {
               backgroundImage: `url(${worstImg})`,
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
+              backgroundSize: "contain",
             }}
           ></div>
           <div className='result-bestWorstText__worst'>
@@ -530,6 +500,7 @@ export default function Resultpage() {
               backgroundImage: `url(${bestImg})`,
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
+              backgroundSize: "contain",
             }}
           ></div>
           <div
@@ -538,6 +509,7 @@ export default function Resultpage() {
               backgroundImage: `url(${worstImg})`,
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
+              backgroundSize: "contain",
             }}
           ></div>
         </div>

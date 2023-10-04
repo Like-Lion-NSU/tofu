@@ -15,7 +15,7 @@
   color: #81e291;
 }
 .result-box {
-  width: 30vw;
+  width: 40vw;
   height: 90vh;
   background-color: rgb(255, 255, 255);
   display: flex;
@@ -38,7 +38,7 @@
 .result-box__analyze--analysisTable {
   width: 40vw;
   color: black;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
 }
 
@@ -50,14 +50,14 @@
   margin: 0;
   border: solid 2px black;
   border-left: none;
-  width: 15vw;
+  width: 20vw;
   height: 30vh;
 }
 .result-worst {
   border: solid 2px black;
   border-left: none;
   border-right: none;
-  width: 15vw;
+  width: 20vw;
   height: 30vh;
 }
 .result-bestWorstText {
@@ -69,7 +69,7 @@
   border: solid 2px black;
   border-left: none;
   border-top: none;
-  width: 15vw;
+  width: 20vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,7 +82,7 @@
   border-left: none;
   border-right: none;
   border-top: none;
-  width: 15vw;
+  width: 20vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -138,12 +138,26 @@ h1 {
     align-items: center;
   }
 
+  .result-box {
+    width: 80vw;
+    height: 120vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+
   .result-best,
   .result-worst {
     margin: 0;
     width: 15vw;
     height: 25vh;
     border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   .result-bestWorstText {
@@ -169,9 +183,16 @@ h1 {
     padding: 5px 0px;
     flex-direction: column;
     border: none;
-    text-align: center;
   }
 
+  .result-bestWorstText__best h2,
+  .result-bestWorstText__worst h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+  }
   .btn-box {
     display: flex;
     flex-direction: column;

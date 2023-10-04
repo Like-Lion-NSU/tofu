@@ -320,6 +320,14 @@ export default function Resultpage() {
     ),
   };
 
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setWindowWidth(window.innerWidth);
+    });
+  }, []);
+
   useEffect(() => {
     console.log(1);
     data["mbtilist"] = mbtilist;
@@ -341,144 +349,212 @@ export default function Resultpage() {
     }
     console.log(3);
     getMbti();
-    console.log(2)
-},[])
+    console.log(2);
+  }, []);
 
-useEffect(()=> {
-    switch(mbti){
-        case 'ENFJ' : 
-            setTofu('푸주')
-            setImgpath(ENFJ)
-            setWorstImg(ESFP)
-            setWorstText('ESFP / 마파두부')
-            setBestImg(INFP)
-            setBestText('INFP / 순두부')
-            break;
-        case 'ENFP' :
-            setTofu('유부')
-            setImgpath(ENFP)
-            setWorstImg(ESFJ)
-            setWorstText('ESFJ / 두유')
-            setBestImg(ENFJ)
-            setBestText('ENFJ / 푸주')
-            break;
-        case 'ENTJ' :
-            setTofu('취두부')
-            setImgpath(ENTJ)
-            setBestImg(INFP)
-            setBestText('INFP / 순두부')
-            setWorstImg(ESTJ)
-            setWorstText('ESTJ / 순두부찌개')
-            break;
-        case 'ENTP' : 
-            setTofu('두부과자')
-            setImgpath(ENTP)
-            setBestImg(INFJ)
-            setBestText('INFJ / 두부조림')
-            setWorstImg(ISFJ)
-            setWorstText('ISFJ / 두부김치')
-            break;
-        case 'ESFP' :
-            setTofu('마파두부')
-            setImgpath(ESFP)
-            setBestImg(ISFJ)
-            setBestText('ISFJ / 두부김치')
-            setWorstImg(INFP)
-            setWorstText('INFP / 순두부')
-            break;
-        case 'ESTJ' :
-            setTofu('순두부찌개')
-            setImgpath(ESTJ)
-            setBestImg(INTP)
-            setBestText('INTP / 건두부')
-            setWorstImg(INFJ)
-            setWorstText('INFJ / 두부조림')
-            break;
-        case 'ESTP' :
-            setTofu('두부강정')
-            setImgpath(ESTP)
-            setBestImg(ISTJ)
-            setBestText('ISTJ / 검은콩두부')
-            setWorstImg(ENFP)
-            setWorstText('ENFP / 유부')
-            break;
-        case 'INFJ' :
-            setTofu('두부조림')
-            setImgpath(INFJ)
-            setBestImg(INFJ)
-            setBestText('INFJ / 두부조림')
-            setWorstImg(ISFP)
-            setWorstText('ISFP / 흰두부')
-            break;
-        case 'INFP' :
-            setTofu('순두부')
-            setImgpath(INFP)
-            setBestImg(ENTJ)
-            setBestText('ENTJ / 취두부')
-            setWorstImg(ISFJ)
-            setWorstText('ISFJ / 두부김치')
-            break;       
-        case 'INTJ' :
-            setTofu('두부스테이크')
-            setImgpath(INTJ)
-            setBestImg(ENTP)
-            setBestText('ENTP / 두부과자')
-            setWorstImg(INFJ)
-            setWorstText('INFJ / 두부조림')
-            break;
-        case 'INTP' :
-            setTofu('건두부')
-            setImgpath(INTP)
-            setBestImg(INFP)
-            setBestText('INFP / 순두부')
-            setWorstImg(ESTJ)
-            setWorstText('ESTJ / 순두부찌개')
-            break;
-        case 'ISFJ' :
-            setTofu('두부김치')
-            setImgpath(ISFJ)
-            setBestImg(ESFP)
-            setBestText('ESFP / 마파두부')
-            setWorstImg(INFP)
-            setWorstText('INFP / 순두부')
-            break;
-        case 'ISFP' :
-            setTofu('흰두부')
-            setImgpath(ISFP) 
-            setBestImg(ENFJ)
-            setBestText('ENFJ / 푸주')
-            setWorstImg(INFP)
-            setWorstText('INFP / 순두부')
-            break;
-            case 'ISTJ' :
-            setTofu('검은콩두부')
-            setImgpath(ISTJ)
-            setBestImg(ESTP)
-            setBestText('ESTP / 두부강정')
-            setWorstImg(INFJ)
-            setWorstText('INFJ / 두부조림')
-            break;
-        case 'ISTP' :
-            setTofu('두부전')
-            setImgpath(ISTP)
-            setBestImg(ESTJ)
-            setBestText('ESTJ / 순두부찌개')
-            setWorstImg(INFP)
-            setWorstText('INFP / 순두부')
-            break;
-        case 'ESFJ' :
-            setTofu('두유')
-            setImgpath(ESFJ)
-            setWorstImg(INFP)
-            setWorstText('INFP / 순두부')
-            setWorstImg(ISTP)
-            setWorstText('ISTP / 두부전')
-            break;
-        }
-},[mbti])
+  useEffect(() => {
+    switch (mbti) {
+      case "ENFJ":
+        setTofu("푸주");
+        setImgpath(ENFJ);
+        setWorstImg(ESFP);
+        setWorstText("ESFP / 마파두부");
+        setBestImg(INFP);
+        setBestText("INFP / 순두부");
+        break;
+      case "ENFP":
+        setTofu("유부");
+        setImgpath(ENFP);
+        setWorstImg(ESFJ);
+        setWorstText("ESFJ / 두유");
+        setBestImg(ENFJ);
+        setBestText("ENFJ / 푸주");
+        break;
+      case "ENTJ":
+        setTofu("취두부");
+        setImgpath(ENTJ);
+        setBestImg(INFP);
+        setBestText("INFP / 순두부");
+        setWorstImg(ESTJ);
+        setWorstText("ESTJ / 순두부찌개");
+        break;
+      case "ENTP":
+        setTofu("두부과자");
+        setImgpath(ENTP);
+        setBestImg(INFJ);
+        setBestText("INFJ / 두부조림");
+        setWorstImg(ISFJ);
+        setWorstText("ISFJ / 두부김치");
+        break;
+      case "ESFP":
+        setTofu("마파두부");
+        setImgpath(ESFP);
+        setBestImg(ISFJ);
+        setBestText("ISFJ / 두부김치");
+        setWorstImg(INFP);
+        setWorstText("INFP / 순두부");
+        break;
+      case "ESTJ":
+        setTofu("순두부찌개");
+        setImgpath(ESTJ);
+        setBestImg(INTP);
+        setBestText("INTP / 건두부");
+        setWorstImg(INFJ);
+        setWorstText("INFJ / 두부조림");
+        break;
+      case "ESTP":
+        setTofu("두부강정");
+        setImgpath(ESTP);
+        setBestImg(ISTJ);
+        setBestText("ISTJ / 검은콩두부");
+        setWorstImg(ENFP);
+        setWorstText("ENFP / 유부");
+        break;
+      case "INFJ":
+        setTofu("두부조림");
+        setImgpath(INFJ);
+        setBestImg(INFJ);
+        setBestText("INFJ / 두부조림");
+        setWorstImg(ISFP);
+        setWorstText("ISFP / 흰두부");
+        break;
+      case "INFP":
+        setTofu("순두부");
+        setImgpath(INFP);
+        setBestImg(ENTJ);
+        setBestText("ENTJ / 취두부");
+        setWorstImg(ISFJ);
+        setWorstText("ISFJ / 두부김치");
+        break;
+      case "INTJ":
+        setTofu("두부스테이크");
+        setImgpath(INTJ);
+        setBestImg(ENTP);
+        setBestText("ENTP / 두부과자");
+        setWorstImg(INFJ);
+        setWorstText("INFJ / 두부조림");
+        break;
+      case "INTP":
+        setTofu("건두부");
+        setImgpath(INTP);
+        setBestImg(INFP);
+        setBestText("INFP / 순두부");
+        setWorstImg(ESTJ);
+        setWorstText("ESTJ / 순두부찌개");
+        break;
+      case "ISFJ":
+        setTofu("두부김치");
+        setImgpath(ISFJ);
+        setBestImg(ESFP);
+        setBestText("ESFP / 마파두부");
+        setWorstImg(INFP);
+        setWorstText("INFP / 순두부");
+        break;
+      case "ISFP":
+        setTofu("흰두부");
+        setImgpath(ISFP);
+        setBestImg(ENFJ);
+        setBestText("ENFJ / 푸주");
+        setWorstImg(INFP);
+        setWorstText("INFP / 순두부");
+        break;
+      case "ISTJ":
+        setTofu("검은콩두부");
+        setImgpath(ISTJ);
+        setBestImg(ESTP);
+        setBestText("ESTP / 두부강정");
+        setWorstImg(INFJ);
+        setWorstText("INFJ / 두부조림");
+        break;
+      case "ISTP":
+        setTofu("두부전");
+        setImgpath(ISTP);
+        setBestImg(ESTJ);
+        setBestText("ESTJ / 순두부찌개");
+        setWorstImg(INFP);
+        setWorstText("INFP / 순두부");
+        break;
+      case "ESFJ":
+        setTofu("두유");
+        setImgpath(ESFJ);
+        setWorstImg(INFP);
+        setWorstText("INFP / 순두부");
+        setWorstImg(ISTP);
+        setWorstText("ISTP / 두부전");
+        break;
+    }
+  }, [mbti]);
 
+  let resultSection;
+  if (windowWidth < 768) {
+    resultSection = (
+      <>
+        <div className='result-best-class'>
+          <div
+            className='result-best'
+            style={{
+              backgroundImage: `url(${bestImg})`,
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          ></div>
+          <div className='result-bestWorstText__best'>
+            <h2>Best</h2>
+            <h2>{bestText}</h2>
+          </div>
+        </div>
+        <div className='result-worst-class'>
+          <div
+            className='result-worst'
+            style={{
+              backgroundImage: `url(${worstImg})`,
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          ></div>
+          <div className='result-bestWorstText__worst'>
+            <h2>Worst</h2>
+            <h2>{worstText}</h2>
+          </div>
+        </div>
+      </>
+    );
+  } else {
+    resultSection = (
+      <>
+        <div className='result-bestWorst'>
+          <div
+            className='result-best'
+            style={{
+              backgroundImage: `url(${bestImg})`,
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          ></div>
+          <div
+            className='result-worst'
+            style={{
+              backgroundImage: `url(${worstImg})`,
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          ></div>
+        </div>
+        <div className='result-bestWorstText'>
+          <div className='result-bestWorstText__best'>
+            <h2>Best</h2>
+            <h2>{bestText}</h2>
+          </div>
+          <div className='result-bestWorstText__worst'>
+            <h2>Worst</h2>
+            <h2>{worstText}</h2>
+          </div>
+        </div>
+      </>
+    );
+  }
 
-return(
+  return (
     <>
       <div className='result'>
         <h2 className='result-title'>
@@ -499,41 +575,14 @@ return(
           ></div>
           <div
             className='result-box__analyze--analysisTable'
-            style={{ color: "white" }}
+            style={{ color: "black" }}
           >
             {mbtidetails[mbti]}
           </div>
         </div>
       </div>
       <h1>추천 상품</h1>
-      <div className='result-bestWorst'>
-        <div
-          className='result-best'
-          style={{
-            backgroundImage: `url(${bestImg})`,
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-        ></div>
-        <div
-          className='result-worst'
-          style={{
-            backgroundImage: `url(${worstImg})`,
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-        ></div>
-      </div>
-      <div className='result-bestWorstText'>
-        <div className='result-bestWorstText__best'>
-          <h2>Best</h2>
-          <h2>{bestText}</h2>
-        </div>
-        <div className='result-bestWorstText__worst'>
-          <h2>Worst</h2>
-          <h2>{worstText}</h2>
-        </div>
-      </div>
+      {resultSection}
       <ResultpageButton />
     </>
   );

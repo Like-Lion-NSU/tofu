@@ -6,9 +6,9 @@ export default function Footer({visitor}){
     return(
         <div className="footerbox" style={{textAlign : "center"}}>
             <p>
-                <small>
+                <strong className="visitortext">
                 총 방문자 수 : {visitor} 명
-                </small>
+                </strong>
             </p>
                 <small>
                     개발진 : 조아빈, 황은혜, 서병덕, 권영태, 김민주<br/>

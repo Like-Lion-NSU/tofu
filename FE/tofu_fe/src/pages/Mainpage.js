@@ -10,7 +10,7 @@ export default function Mainpage() {
     const [visitor, setVisitor] = useState('')
     const navigate = useNavigate()
     const MoveToQ = e => {
-        navigate('/testpage')
+        navigate('/question')
     }
     useEffect(()=>{
         axios({

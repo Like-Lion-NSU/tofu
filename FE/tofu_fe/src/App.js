@@ -11,9 +11,9 @@ export default function App(){  // Main 화면
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Mainpage/>}/>
-        <Route path='/testpage' element={<Testpage/>}/>
-        <Route path='/resultpage' element={<Resultpage/>}/>
-        <Route path='/rankingpage' element={<Rankingpage/>}/>
+        <Route path='/question' element={<Testpage/>}/>
+        <Route path='/tofumbti' element={<Resultpage/>}/>
+        <Route path='/tofurank' element={<Rankingpage/>}/>
       </Routes>
     </BrowserRouter>
   )

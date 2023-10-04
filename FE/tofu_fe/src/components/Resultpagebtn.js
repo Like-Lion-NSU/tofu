@@ -12,7 +12,7 @@ const ResultpageButton = () => {
     }
 
     const gotorank = e => {
-        navigate('/rankingpage')
+        navigate('/tofurank')
     }
     return(
     <>

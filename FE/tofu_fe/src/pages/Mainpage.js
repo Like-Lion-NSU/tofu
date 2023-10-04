@@ -1,14 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import '../css/Mainpage.css'
 import tofuImage from '../img/tofu-image.png'
 import { useNavigate } from "react-router-dom";
 import maintext from '../img/maintext.png'
+import axios from "axios";
 
 export default function Mainpage() {
     const navigate = useNavigate()
     const MoveToQ = e => {
         navigate('/testpage')
     }
+    useEffect(()=>{
+        axios({
+            method : 'get',
+            url : 'v1/visitor'
+        })
+        .then(res => {
+            console.log(res)
+            console.log(res.data)
+        })
+        .catch(err => console.log(err))
+    },[])
     return(       
         <div className='app-container'>
             <header className="app-header">

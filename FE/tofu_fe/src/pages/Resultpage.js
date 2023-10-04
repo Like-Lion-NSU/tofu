@@ -249,7 +249,7 @@ useEffect(()=> {
             setImgpath(ENFP)
             setWorstImg(ESFJ)
             setWorstText('ESFJ / 두유')
-            setBestImg(ENTJ)
+            setBestImg(ENFJ)
             setBestText('ENFJ / 푸주')
             break;
         case 'ENTJ' :

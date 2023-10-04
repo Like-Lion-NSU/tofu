@@ -94,7 +94,7 @@ export default function Rankingpage() {
                                backgroundImage: `url(${getImage(list.mbti)})`, 
                                backgroundRepeat : "no-repeat",
                                backgroundPosition : 'center',
-                               backgroundSize: '150px 170px',
+                               backgroundSize: 'auto',
                                width : '150px',
                                height : '170px'
                             }}></div>

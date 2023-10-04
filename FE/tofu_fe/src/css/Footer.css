@@ -1,0 +1,6 @@
+.instalink{
+    color: blue;
+    &:visited{
+        color: blue;
+    }
+}

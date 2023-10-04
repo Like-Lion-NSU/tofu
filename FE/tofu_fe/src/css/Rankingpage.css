@@ -52,3 +52,11 @@
     justify-content: center;
     align-items: center;
 }
+.mbtiimg{
+    background-repeat : no-repeat;
+    background-position : center;
+    background-size : contain;
+    width : 150px;
+    height : 200px;
+}
+

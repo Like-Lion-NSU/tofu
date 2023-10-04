@@ -90,13 +90,8 @@ export default function Rankingpage() {
                 return(
                     <div className="ranklistbox">
                         <div className="mbtilist">
-                            <div style={{
+                            <div className="mbtiimg" style={{
                                backgroundImage: `url(${getImage(list.mbti)})`, 
-                               backgroundRepeat : "no-repeat",
-                               backgroundPosition : 'center',
-                               backgroundSize: 'auto',
-                               width : '150px',
-                               height : '170px'
                             }}></div>
                             {list.mbti}
                         </div>

@@ -24,10 +24,7 @@ public class TofuController {
 
     @PostMapping("/v1/mbtiResult")
     public ResponseEntity<String> calculateMbti(@RequestBody Map<String, String> answerKey){
-        log.info("결정된 result1 : {}", tofuService.findMbti(answerKey));
         String str = tofuService.findMbti(answerKey);
-        Map<String, String> map = new HashMap<>();
-        map.put("mbti", str);
         return ResponseEntity.ok(str);
     }
 

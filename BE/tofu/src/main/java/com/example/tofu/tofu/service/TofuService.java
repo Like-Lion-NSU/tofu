@@ -53,7 +53,6 @@ public class TofuService {
         StringBuilder str = new StringBuilder();
         //"['E','N','F','P','I','S','T','J','E','N','F','P']"
         String value = answerKey.get("mbtilist");
-        log.info("value : {}", value);
 
   /*      for (int i = 3; i < value.length(); i += 2) {
             str.append(value.charAt(i));
@@ -70,7 +69,6 @@ public class TofuService {
         int F = (int) value.chars().filter(ch -> ch =='F').count();
         int J = (int) value.chars().filter(ch -> ch =='J').count();
         int P = (int) value.chars().filter(ch -> ch =='P').count();
-        log.info("E I S N T F J P : {}, {}, {}, {}, {}, {}, {}, {}", E, I, S, N, T, F, J, P);
 
 
         /*for (int i = 0; i<str.length(); i++) {
@@ -109,6 +107,7 @@ public class TofuService {
         mbti.append(T>F ? "T" : "F");
         mbti.append(J>P ? "J" : "P");
 
+
         return mbti.toString();
     }
 
@@ -120,5 +119,6 @@ public class TofuService {
         findTofu.setSeq(currentSeq);
 
         tofuRepository.save(findTofu);
+
     }
 }

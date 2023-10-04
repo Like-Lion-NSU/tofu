@@ -1,5 +1,9 @@
 server:
-  port: 8081
+  port: 8080
+  servlet:
+    session:
+      timeout: 604800
+
 spring:
   mvc:
     static-path-pattern: /static/**
@@ -13,7 +17,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://49.50.165.103:3306/tofu
     username: tofu
-    password: 1234
+    password: dudxo99@!
 
   jpa:
     database: mysql

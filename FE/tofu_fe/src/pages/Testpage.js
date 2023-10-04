@@ -290,7 +290,6 @@ export default function Testpage(){
         }
     };
 
-
     const progressBarWidth = ((Index + 1) / QuestionA.length) * 100 + "%";
     const progressBarStyle = { width: progressBarWidth };
 

@@ -1,3 +1,4 @@
+import axios from 'axios';
 import '../css/resultpages.css';
 import { useNavigate } from 'react-router-dom';
 
@@ -8,6 +9,15 @@ const ResultpageButton = () => {
 
     const gotoMain = e => {
         window.localStorage.removeItem('list')
+        axios({
+            method : 'get',
+            url : '/v1/visitor2',
+        })
+        .then(res=>{
+            console.log(res)
+            console.log(res.data)
+        })
+        .catch(err => console.log(err));
         navigate('/')
     }
 

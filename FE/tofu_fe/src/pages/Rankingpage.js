@@ -76,6 +76,15 @@ export default function Rankingpage() {
 
     const gotomain = e => {
         window.localStorage.removeItem('list')
+        axios({
+            method : 'get',
+            url : '/v1/visitor2',
+        })
+        .then(res=>{
+            console.log(res)
+            console.log(res.data)
+        })
+        .catch(err => console.log(err));
         navigate('/')
     }
 
@@ -91,7 +100,7 @@ export default function Rankingpage() {
                 const percentage = (list.seq / total) * 100; // 백분율 계산
                 const percentageStyle = {
                     width: `${percentage}%`, // 퍼센트 값을 width 스타일로 설정
-                    backgroundColor: 'lightblue', // 퍼센트 바의 배경색 설정
+                    backgroundColor: '#f9f3c3', // 퍼센트 바의 배경색 설정
                 };
                 return(
                     <div className="ranklistbox">

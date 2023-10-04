@@ -17,11 +17,13 @@ import INTP from '../img/INTP건두부.png'
 import ISFJ from '../img/ISFJ두부김치.png'
 import ISFP from '../img/ISFP흰두부.png'
 import ISTP from '../img/ISTP두부전.png'
+import { useNavigate } from "react-router-dom";
 
 export default function Rankingpage() {
 
     const [ranklist, setRanklist] = useState([])
     const [total, setTotal] = useState(0)
+    const navigate = useNavigate()
 
     useEffect(()=>{
         axios({
@@ -72,6 +74,11 @@ export default function Rankingpage() {
         }
     }
 
+    const gotomain = e => {
+        window.localStorage.removeItem('list')
+        navigate('/')
+    }
+
     return (
         <div className="rankingbox">
             <div className="rankingtitlebox">
@@ -85,7 +92,6 @@ export default function Rankingpage() {
                 const percentageStyle = {
                     width: `${percentage}%`, // 퍼센트 값을 width 스타일로 설정
                     backgroundColor: 'lightblue', // 퍼센트 바의 배경색 설정
-                    height : '20px',
                 };
                 return(
                     <div className="ranklistbox">
@@ -96,11 +102,7 @@ export default function Rankingpage() {
                             {list.mbti}
                         </div>
                         <div className="rankinglist">
-                            <div className="totalbar" style={{
-                                width : '250px',
-                                height : '20px',
-                                border : '1px solid lightblue'
-                            }}>
+                            <div className="totalbar">
                                 <div className="seqbar" style={percentageStyle}></div>
                             </div>
                             {percentage.toFixed(0)}%  {/* 퍼센트를 소수점 두 자리로 표시 */}
@@ -108,6 +110,7 @@ export default function Rankingpage() {
                     </div>
                 )
             })}
+            <button className="ranktomainbtn" onClick={gotomain}>시작화면으로</button>
         </div>
     )
 }

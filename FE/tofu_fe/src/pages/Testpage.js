@@ -277,13 +277,14 @@ export default function Testpage(){
     ]
 
     const UserSelect = e => {
-        console.log(e.target.title);
-        setSelected([...selected, e.target.title]);
+        const selectedTitle = e.currentTarget.getAttribute("data-title");
+        console.log(selectedTitle);
+        setSelected(prevSelected => [...prevSelected, selectedTitle]);
         if (Index < 11) {
             setIndex(Index => Index + 1);
         } else {
             // Index가 11일 때는 PostSelctList를 호출
-            selected.push(e.target.title)
+            selected.push(selectedTitle)
             window.localStorage.setItem('list', JSON.stringify(selected))
             window.location.href = '/resultpage'
         }
@@ -301,9 +302,13 @@ export default function Testpage(){
             </div>
             <div className="Testtext">{situation[Index]}</div>
             <div className="selectbox">
-                <div className="selectbtn selecta" title={SelectA[Index]} onClick={UserSelect}>{QuestionA[Index]}</div>
+                <div className="selectbtn selecta" data-title={SelectA[Index]} onClick={UserSelect}>
+                    {QuestionA[Index]}
+                </div>
                 <div style={{fontSize:'2rem'}}>vs</div>
-                <div className="selectbtn selectb" title={SelectB[Index]} onClick={UserSelect}>{QuestionB[Index]}</div>
+                <div className="selectbtn selectb" data-title={SelectB[Index]} onClick={UserSelect}>
+                    {QuestionB[Index]}
+                </div>
             </div>
         </div>
     )

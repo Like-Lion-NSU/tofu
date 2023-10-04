@@ -7,6 +7,7 @@ const ResultpageButton = () => {
     const navigate = useNavigate();
 
     const gotoMain = e => {
+        window.localStorage.removeItem('list')
         navigate('/')
     }
 

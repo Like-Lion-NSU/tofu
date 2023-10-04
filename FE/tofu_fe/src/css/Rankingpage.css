@@ -4,6 +4,7 @@
     align-items: center;
     height: 80vh;
     margin-top: 5vh;
+    margin-bottom: 5vh;
 }
 .rankingtitlebox{
     display: flex;
@@ -59,4 +60,85 @@
     width : 150px;
     height : 200px;
 }
+.ranktomainbtn{
+    width: 20vw;
+    height: 10vh;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    border: none;
+    font-weight: 600;
+    box-shadow: 3px 5px 7px rgb(193, 193, 193);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4vh;
+}
+.totalbar{
+    width : 250px;
+    height : 20px;
+    border : 1px solid lightblue;
+}
+.seqbar{
+    height : 20px;
+}
 
+@media screen and (max-width : 600px){
+    .ranklistbox{
+        width: 350px;
+        border: 3px solid #C1CCB7;
+        height: 120px;
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid #C1CCB7;
+    }
+    .mbtilist{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-right: 1px solid #C1CCB7;
+        width: 120px;
+        margin-top: 7px;
+        margin-bottom: 7px;
+    }
+    .rankinglist{
+        width: 280px;
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .mbtiimg{
+        background-repeat : no-repeat;
+        background-position : center;
+        background-size : contain;
+        width : 80px;
+        height : 120px;
+    }
+    .ranktomainbtn{
+        width: 20vw;
+        height: 10vh;
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 50px;
+        border: none;
+        font-weight: 600;
+        box-shadow: 3px 5px 7px rgb(193, 193, 193);
+        transition: transform 0.3s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 4vh;
+    }
+    .totalbar{
+        width : 150px;
+        height : 20px;
+        border : 1px solid lightblue;
+    }
+    .seqbar{
+        height : 20px;
+    }
+}

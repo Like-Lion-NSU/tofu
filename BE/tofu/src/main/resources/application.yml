@@ -16,7 +16,7 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://49.50.165.103:3306/tofu
-    username: tofu
+    username: tofumbti
     password: dudxo99@!
 
   jpa:

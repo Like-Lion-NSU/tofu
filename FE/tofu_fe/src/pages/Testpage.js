@@ -286,7 +286,7 @@ export default function Testpage(){
             // Index가 11일 때는 PostSelctList를 호출
             selected.push(selectedTitle)
             window.localStorage.setItem('list', JSON.stringify(selected))
-            window.location.href = '/resultpage'
+            window.location.href = '/tofumbti'
         }
     };
 

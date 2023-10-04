@@ -1,0 +1,101 @@
+.result{
+    text-align: center;
+  }
+  .result-tofuType {
+    background-color: #F9F3C3;
+    color : #81E291;
+  }
+  .result-box{
+    width: 50vh;
+    height: 90vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .result-box__analyze{
+    width:100%;
+    height: 98%;
+    background-color: #EEFEDD;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .result-box__analyze--tofuTypeImg{
+    width: 55%;
+    height: 30%;
+  }
+  .result-box__analyze--analysisTable{
+    width: 20vw;
+    height: 35vh;
+    background-color: #4A4A48;
+  }
+  .result-bestWorst{
+    display: flex;
+    justify-content: center;
+  }
+  .result-best{
+    margin: 0;
+    border: solid 2px black;
+    border-left: none;
+    width: 20vw;
+    height: 30vh;
+  }
+  .result-worst{
+    border: solid 2px black;
+    border-left: none;
+    border-right: none;
+    width: 20vw;
+    height: 30vh;
+  }
+  .result-bestWorstText{
+    display: flex;
+    justify-content: center;
+  }
+  .result-bestWorstText__best{
+    margin: 0;
+    border: solid 2px black;
+    border-left: none;
+    border-top: none;
+    width: 20vw;
+  }
+  .result-bestWorstText__best h2{
+    margin-top: 0;
+  }
+  .result-bestWorstText__worst{
+    margin: 0;
+    border: solid 2px black;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    width: 20vw;
+  }
+  .result-bestWorstText__worst h2{
+    margin-top: 0;
+  }
+  .btn-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 23vh;
+    justify-content: space-between;
+    margin-top: 60px;
+    margin-bottom: 50px;
+  }
+  .btn{
+    width: 15vw;
+    height: 10vh;
+    border-radius: 40px;
+    border: none;
+    font-weight: 600;
+    box-shadow: 3px 5px 7px black;
+    padding: 25px 0 30px 0;
+  }
+  .btn-replay{
+    background-color: #F9F3C3;
+  }
+  
+  .btn-rank{
+    background-color: #7df89c;
+  }

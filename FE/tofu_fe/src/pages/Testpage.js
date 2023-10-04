@@ -9,8 +9,19 @@ export default function Testpage(){
 
     const SelectA = ['E', 'N', 'F', 'P', 'I', 'S', 'T', 'J', 'E', 'N', 'F', 'P']
     const SelectB = ['I', 'S', 'T', 'J', 'E', 'N', 'F', 'P', 'I', 'S', 'T', 'J']
-    const QuestionA = ['E', 'N', 'F', 'P', 'I', 'S', 'T', 'J', 'E', 'N', 'F', 'P']
-    const QuestionB = ['I', 'S', 'T', 'J', 'E', 'N', 'F', 'P', 'I', 'S', 'T', 'J']
+    const QuestionA = [
+        (
+            <>
+                <p>뭐?? 두부전?!</p>
+            </>
+        ), 
+        'N', 'F', 'P', 'I', 'S', 'T', 'J', 'E', 'N', 'F', 'P']
+    const QuestionB = [
+        (
+            <>
+                <p>비도 오는데 무슨..</p>혼자서 두부전 해먹을래~
+            </>
+        ), 'S', 'T', 'J', 'E', 'N', 'F', 'P', 'I', 'S', 'T', 'J']
 
 
     const UserSelect = e => {

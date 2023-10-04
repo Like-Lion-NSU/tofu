@@ -13,6 +13,21 @@ export default function Mainpage() {
         navigate('/question')
     }
     useEffect(()=>{
+         // 쿠키 이름과 만료 시간 (초 단위) 설정
+        const cookieName = 'JSESSIONID';
+        const maxAgeInSeconds = 604800
+        // 현재 날짜 및 시간 객체 생성
+        const currentDate = new Date();
+
+        // 만료 시간 설정 (현재 시간 + 만료 시간)
+        currentDate.setTime(currentDate.getTime() + maxAgeInSeconds * 1000);
+
+        // 만료 시간을 GMT 문자열로 변환
+        const expires = currentDate.toUTCString();
+
+        // 쿠키 설정
+        document.cookie = `${cookieName}=someValue; expires=${expires}; path=/`;
+
         axios({
             method : 'get',
             url : 'v1/visitor'

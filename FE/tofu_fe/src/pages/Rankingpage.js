@@ -20,11 +20,11 @@ import ISTP from '../img/ISTP두부전.png'
 import { useNavigate } from "react-router-dom";
 
 export default function Rankingpage() {
-
+    const root = document.getElementById('root');
     const [ranklist, setRanklist] = useState([])
     const [total, setTotal] = useState(0)
     const navigate = useNavigate()
-
+    root.style.height = 'auto'
     useEffect(()=>{
         axios({
             method : 'get',
@@ -110,7 +110,7 @@ export default function Rankingpage() {
                     </div>
                 )
             })}
-            <button className="ranktomainbtn" onClick={gotomain}>시작화면으로</button>
+            <button className="ranktomainbtn" onClick={gotomain}>다시 테스트하기</button>
         </div>
     )
 }

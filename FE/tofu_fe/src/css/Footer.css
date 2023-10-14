@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+.footerbox{
+    /* font-family: 'Gowun Dodum', sans-serif; */
+    font-weight:500;
+    opacity: 0.7;
+}
+.instalink{
+    text-decoration: none;
+    color: blue;
+    &:visited{
+        color: blue;
+    }
+}
+.visitortext{
+    opacity: 1;
+}

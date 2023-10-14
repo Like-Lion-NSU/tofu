@@ -278,7 +278,6 @@ export default function Testpage(){
 
     const UserSelect = e => {
         const selectedTitle = e.currentTarget.getAttribute("data-title");
-        console.log(selectedTitle);
         setSelected(prevSelected => [...prevSelected, selectedTitle]);
         if (Index < 11) {
             setIndex(Index => Index + 1);

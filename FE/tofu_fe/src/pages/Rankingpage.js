@@ -31,8 +31,6 @@ export default function Rankingpage() {
             url : '/v1/rank',
         })
         .then(res => {
-            console.log(res)
-            console.log(res.data)
             const data = res.data
             let list = data.sort((a, b) => (b.seq - a.seq))
             setRanklist(list)
@@ -75,16 +73,6 @@ export default function Rankingpage() {
     }
 
     const gotomain = e => {
-        window.localStorage.removeItem('list')
-        axios({
-            method : 'get',
-            url : '/v1/visitor2',
-        })
-        .then(res=>{
-            console.log(res)
-            console.log(res.data)
-        })
-        .catch(err => console.log(err));
         navigate('/')
     }
 
@@ -92,9 +80,6 @@ export default function Rankingpage() {
         <div className="rankingbox">
             <div className="rankingtitlebox">
                 <h1 className="rankingtitle">두부 랭킹</h1>
-                <div className="totalcount">
-                총 인원 :{total} 명
-                </div>
             </div>
             {ranklist?.map(list => {
                 const percentage = (list.seq / total) * 100; // 백분율 계산

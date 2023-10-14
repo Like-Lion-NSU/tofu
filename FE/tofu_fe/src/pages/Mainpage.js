@@ -1,21 +1,20 @@
 import React, { useEffect, useState } from "react";
 import '../css/Mainpage.css'
 import tofuImage from '../img/tofu-image.png'
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import maintext from '../img/maintext.png'
 import axios from "axios";
 import Footer from "../components/Footer";
 
 export default function Mainpage() {
-    const [visitor, setVisitor] = useState('')
+    const [visitor, setVisitor] = useState('');
     const navigate = useNavigate()
     const MoveToQ = e => {
         navigate('/question')
     }
     useEffect(()=>{
         const data = {}
-        const Postsession = () => {
-            
+          const Postsession = () => {
             const cookieName = 'jsessionid';
           
             // 랜덤한 문자열 생성 함수
@@ -44,8 +43,6 @@ export default function Mainpage() {
                 data: data,
               })
                 .then((res) => {
-                  console.log(res);
-                  console.log(res.data);
                   setVisitor(res.data);
                 })
                 .catch((err) => console.log(err));
@@ -67,18 +64,23 @@ export default function Mainpage() {
                 data: data,
               })
                 .then((res) => {
-                  console.log(res);
-                  console.log(res.data);
                   setVisitor(res.data);
                 })
                 .catch((err) => console.log(err));
             }
           };
-          window.addEventListener('load', function() {
+          // window.addEventListener('load', function() {
             // Postsession 함수 호출
             Postsession();
-          });
+          // })  
     },[])
+    // useEffect(()=>{
+    //   console.log(count)
+    //   if(count >= 1){
+    //     console.log(location.state.visitor)
+    //     setVisitor(location.state.visitor)
+    //   }
+    // }, [count])
     return(  
         <>    
             <div className='app-container'>

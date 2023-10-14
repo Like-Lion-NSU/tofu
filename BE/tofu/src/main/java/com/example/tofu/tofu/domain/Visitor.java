@@ -19,7 +19,7 @@ public class Visitor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String visitorIp;
+    private String visitorJsessionid;
 
     private String timestamp;
 
@@ -29,9 +29,9 @@ public class Visitor {
     }
 
     @Builder
-    public Visitor(Long id, String VisitorIp, String timestamp) {
+    public Visitor(Long id, String visitorJsessionid, String timestamp) {
         this.id = id;
-        this.visitorIp = VisitorIp;
+        this.visitorJsessionid = visitorJsessionid;
         this.timestamp = timestamp;
     }
 }

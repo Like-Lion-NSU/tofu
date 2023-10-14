@@ -7,5 +7,5 @@ import java.util.Optional;
 
 public interface VisitorRepository extends JpaRepository<Visitor, Long> {
 
-    Optional<Visitor> findByVisitorIp(String visitorIp);
+    Optional<Visitor> findByVisitorJsessionid(String visitorJsessionid);
 }
